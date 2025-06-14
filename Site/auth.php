@@ -5,7 +5,7 @@ session_start();
 header('Content-Type: application/json');
 
 // Подключаемся к базе данных MySQL (хранилищу информации)
-$conn = new mysqli("localhost", "root", "root", "catalog");
+require_once 'db.php';
 // Проверяем, получилось ли подключиться, если нет — выдаём ошибку
 if ($conn->connect_error) {
     die(json_encode(['success' => false, 'message' => 'Ошибка подключения к базе данных']));

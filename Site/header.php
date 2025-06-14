@@ -1,9 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "root", "root", "catalog");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'db.php';
 ?>
 <header>
     <a href="/"><div class="logo">Timber Soul</div></a>
